@@ -1,4 +1,4 @@
-WhichWay does not ask whether a number is good enough, and it does not grade anything on a scale. The number is already on the record. It asks which side of that number the author is not allowed to be on, and it turns that answer into the comparison operator every later reading is judged by.
+BoundDirection does not ask whether a number is good enough, and it does not grade anything on a scale. The number is already on the record. It asks which side of that number the author is not allowed to be on, and it turns that answer into the comparison operator every later reading is judged by.
 
 # BoundDirection
 
@@ -48,4 +48,15 @@ python3 BOUNDDIRECTION_KILLSET_CHECK.py contracts/BoundDirection.py
 python3 -m unittest discover -s tests -v
 ```
 
-The source SHA-256 is recorded in `SOURCE_SHA256.txt`. StudioNet semantic and runtime results must be added only after real transactions have completed successfully.
+The source SHA-256 is recorded in `SOURCE_SHA256.txt`. Completed StudioNet semantic and runtime results are recorded in `TESTING.md`.
+
+## Verified StudioNet deployment
+
+- Contract: `0x221cA363AE07381EC83B53bFc527b4dbf1d7C656`
+- Chain ID: `61999`
+- Deployment transaction: `0x69466b777ff3873d5a55d25baf49b6b02c8d7a8506f65ce6d2ba07368d491cba`
+- Source SHA-256: `9aef694bb65c030ca2981a47110bd0f446db0422f62ad7d2e60e3ffa5e39ed42`
+- Deployed source parity: exact after newline normalization
+- Runtime: 12/12 finalized transactions matched the expected execution and post-state
+
+The live run proved opposite deterministic behavior around the same amount, fail-closed handling for ambiguous text, permanent sealing, and the ability of the named other wallet to dispute an existing reading after sealing. Full hashes and final state are recorded in `TESTING.md`.
